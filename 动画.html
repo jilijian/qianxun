@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.title{
+			width: 100%;
+			background: red;
+			text-align: center;
+		}
+		p{
+			width: 400px;
+			margin: 20px auto;
+			color: #fff;
+			transition: 2s;
+		}
+		.title span{
+			background: url('images/logo-text.png') right center no-repeat;
+			display: inline-block;
+			height: 50px;
+			width: 150px;
+			transition: 2s;
+		}
+		.title>img{
+			transition: 2s;
+		}
+		.no span{
+			margin-right: -1200px;
+		}
+		.no>img{
+			transform: rotate(180deg)
+		}
+		
+		.no p{
+			transform: scale(0.1) rotate(360deg);
+			opacity: 0.1;
+		}	
+	</style>
+	<script src='js/jquery-1.11.1.js'></script>
+	<script>
+		$(function(){
+			$('div').click(function(event) {
+				$(this).removeClass('no')
+			});
+		})
+	</script>
+</head>
+<body>
+	<div class="no">
+		<span><img src="images/logo.png" alt="" height="50px"></span>
+		<img src="images/title1.png" alt="" height="50px">
+		<p>就算是再相同的一天，换一扇窗看出去，都是一个不同的世界，从现在起，打开应用中心，发现更大世界。</p>
+	</div>
+</body>
+</html>
